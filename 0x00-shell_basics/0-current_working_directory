@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Absolute path of current working directory: $cwd"
+echo "$pwd"
