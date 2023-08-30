@@ -1,2 +1,2 @@
 #!/bin/bash
-cp [OPTION]... SOURCE DEST
+cp -u --target-directory="../" *.html
