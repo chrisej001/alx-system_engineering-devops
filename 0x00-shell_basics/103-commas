@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -A1 | grep -E '^[0-9A-Za-z]' > tmp_file | sort -k1,1n -k2 tmp_file | sed 's/^/"/; s/$/"/; s/ /, /g; s/$/\//; 1s/^/., /; 2s/^/\.\., /; $s/$/\n/' tmp_file | rm tmp_file
+ls -A1 | grep -E '^[0-9A-Za-z]' | sort | awk '{ printf "\"%s\", ", $0 } END { print "\"./\", \"../\"" }'
