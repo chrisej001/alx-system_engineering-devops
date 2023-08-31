@@ -1,2 +1,2 @@
 #!/bin/bash
-(printf "./, ../, " ; ls -A1 | grep -E '^[0-9A-Za-z]' | sort | tr '\n' ', ' | sed 's/, $//'; echo "")
+printf "./, ../, " ls -A1  grep "^[A-Za-z0-9]"  sort  tr '\n' ','  sed 's/,$/\n/'
