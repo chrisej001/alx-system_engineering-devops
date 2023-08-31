@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -A1 | grep -E '^[0-9A-Za-z]' | sort | awk '{ printf "\"%s\", ", $0 } END { print "\"./\", \"../\"" }'
+(printf "./, ../, " ; ls -A1 | grep -E '^[0-9A-Za-z]' | sort | tr '\n' ', ' | sed 's/, $//'; echo "")
