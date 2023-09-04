@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "YourInputText" | tr 'A' 'Z'
+tr 'Ac' 'Ze'
